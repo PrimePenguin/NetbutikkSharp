@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 
-namespace _NettbutikkSharp.Entities
+namespace NettbutikkSharp.Entities
 {
     public class ProductsQueryResponse
     {

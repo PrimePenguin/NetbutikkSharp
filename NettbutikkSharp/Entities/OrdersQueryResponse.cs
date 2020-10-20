@@ -5,7 +5,7 @@ using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace _NettbutikkSharp.Entities
+namespace NettbutikkSharp.Entities
 {
     public class OrdersQueryResponse
     {

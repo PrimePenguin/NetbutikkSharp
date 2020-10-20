@@ -4,7 +4,7 @@ using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace _NettbutikkSharp.Entities
+namespace NettbutikkSharp.Entities
 {
     public class OrderUpdateStatusRequest
     {

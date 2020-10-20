@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace _NettbutikkSharp.Services
+namespace NettbutikkSharp.Services
 {
     public class NettbutikkService
     {
