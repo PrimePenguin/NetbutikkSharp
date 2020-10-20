@@ -36,27 +36,29 @@ namespace _NettbutikkSharp.Services
 
         public static async Task<T> ExecuteGetAsync<T>(string url)
         {
-            using var client = new HttpClient();
-            var result = await client.GetAsync(url);
-
-            T responseObj;
-            using (var reader = new StreamReader(await result.Content.ReadAsStreamAsync(), Encoding.GetEncoding("iso-8859-1")))
+            using (var client = new HttpClient())
             {
-                var content = reader.ReadToEnd();
-                responseObj = JsonConvert.DeserializeObject<T>(content);
+                var result = await client.GetAsync(url);
+                T responseObj;
+                using (var reader = new StreamReader(await result.Content.ReadAsStreamAsync(), Encoding.GetEncoding("iso-8859-1")))
+                {
+                    var content = reader.ReadToEnd();
+                    responseObj = JsonConvert.DeserializeObject<T>(content);
+                }
+                return responseObj;
             }
-            return responseObj;
         }
 
         public static async Task<T> ExecutePostAsync<T>(string requestJson, bool isPatchRequest, string url)
         {
             var data = new StringContent(requestJson, Encoding.UTF8, "application/json");
-            using var client = new HttpClient();
-            var response = !isPatchRequest ? await client.PostAsync(url, data) : await client.PatchAsync(url, data);
-
-            var result = response.Content.ReadAsStringAsync().Result;
-            var responseObj = JsonConvert.DeserializeObject<T>(result);
-            return responseObj;
+            using (var client = new HttpClient())
+            {
+                var response = !isPatchRequest ? await client.PostAsync(url, data) : await client.PatchAsync(url, data);
+                var result = response.Content.ReadAsStringAsync().Result;
+                var responseObj = JsonConvert.DeserializeObject<T>(result);
+                return responseObj;
+            }
         }
     }
 }
