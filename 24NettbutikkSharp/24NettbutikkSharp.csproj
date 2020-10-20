@@ -2,7 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_24NettbutikkSharp</RootNamespace>
+    <RootNamespace>24NettbutikkSharp</RootNamespace>
+    <Version>0.0.1</Version>
+
+  </PropertyGroup>
+  <PropertyGroup>
+    <Description>24NettbutikkSharp is a C# and .NET library that helps developers easily authenticate with and manage 24Nettbutikk stores.</Description>
+    <Authors>Ajay Kumar</Authors>
+    <Copyright>Prime Penguin</Copyright>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/PrimePenguin/24NettbutikkSharp/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/PrimePenguin/24NettbutikkSharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/PrimePenguin/24NettbutikkSharp</RepositoryUrl>
+    <PackageTags>24Nettbutikk,ecommerce</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIconUrl>https://raw.githubusercontent.com/PrimePenguin/24NettbutikkSharp/master/PrimePenguin.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
