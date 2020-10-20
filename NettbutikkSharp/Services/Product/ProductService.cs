@@ -4,10 +4,10 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using _24NettbutikkSharp.Entities;
+using _NettbutikkSharp.Entities;
 using Abp.Json;
 
-namespace _24NettbutikkSharp.Services.Product
+namespace _NettbutikkSharp.Services.Product
 {
     public class ProductService : NettbutikkService
     {

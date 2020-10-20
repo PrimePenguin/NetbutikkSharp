@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using _24NettbutikkSharp.Entities;
-using _24NettbutikkSharp.Services.Product;
+using _NettbutikkSharp.Entities;
+using _NettbutikkSharp.Services.Product;
 using Abp.Extensions;
 using Abp.Json;
 
-namespace _24NettbutikkSharp.Services.Order
+namespace _NettbutikkSharp.Services.Order
 {
     public class OrderService : NettbutikkService
     {
