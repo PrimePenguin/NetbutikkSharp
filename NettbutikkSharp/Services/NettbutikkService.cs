@@ -9,7 +9,7 @@ namespace NettbutikkSharp.Services
 {
     public class NettbutikkService
     {
-        protected string _ShopUri { get; set; }
+        protected string _ShopName { get; set; }
 
         protected string _apiKey { get; set; }
 
@@ -21,17 +21,17 @@ namespace NettbutikkSharp.Services
         protected NettbutikkService(string storeUrl, string apiKey)
         {
             _apiKey = apiKey;
-            _ShopUri = storeUrl;
+            _ShopName = storeUrl;
         }
 
         protected string PrepareProductRequest(string path, int flat)
         {
-            return $"http://{_ShopUri}/api/v1/{path}?flat={flat}&access_token={_apiKey}";
+            return $"{_ShopName}/api/v1/{path}?flat={flat}&access_token={_apiKey}";
         }
 
         protected string PrepareOrderRequest(string path)
         {
-            return $"http://{_ShopUri}/api/v1/{path}?access_token={_apiKey}";
+            return $"{_ShopName}/api/v1/{path}?access_token={_apiKey}";
         }
 
         public static async Task<T> ExecuteGetAsync<T>(string url)
