@@ -99,10 +99,10 @@ namespace NettbutikkSharp.Entities
         public string ShippingMethodText { get; set; }
 
         /// <summary>
-        /// 	The shipping costs. Two decimals precision
+        /// The shipping costs. Two decimals precision
         /// </summary>
         [JsonProperty("shipping_costs")]
-        public string ShippingCosts { get; set; }
+        public decimal? ShippingCosts { get; set; }
 
         /// <summary>
         /// The costs for shipping to Svalbard. Two decimals precision
@@ -144,13 +144,13 @@ namespace NettbutikkSharp.Entities
         /// Whether or not the order has been completely paid
         /// </summary>
         [JsonProperty("paid")]
-        public string Paid { get; set; }
+        public int? Paid { get; set; }
 
         /// <summary>
         /// Whether or not the order has been deleted
         /// </summary>
         [JsonProperty("deleted")]
-        public string Deleted { get; set; }
+        public byte Deleted { get; set; }
 
         /// <summary>
         /// The date when the order was deleted. Format YYYY-MM-DD
@@ -216,7 +216,7 @@ namespace NettbutikkSharp.Entities
         /// The gross total amount of the order. Two decimals precision
         /// </summary>
         [JsonProperty("total_amount_gross")]
-        public string TotalAmountGross { get; set; }
+        public decimal? TotalAmountGross { get; set; }
 
         /// <summary>
         /// The total value added tax due. Two decimals precision
@@ -276,19 +276,19 @@ namespace NettbutikkSharp.Entities
         /// The quantity that has been ordered – the number of items, amounts, lengths
         /// </summary>
         [JsonProperty("quantity")]
-        public string Quantity { get; set; }
+        public decimal? Quantity { get; set; }
 
         /// <summary>
         /// The price for one item or one unit
         /// </summary>
         [JsonProperty("unit_price")]
-        public string UnitPrice { get; set; }
+        public decimal? UnitPrice { get; set; }
 
         /// <summary>
         /// Whether or not this order line has been sent
         /// </summary>
         [JsonProperty("sent")]
-        public string Sent { get; set; }
+        public int? Sent { get; set; }
 
         /// <summary>
         /// The quantity that actually has been sent
@@ -312,7 +312,7 @@ namespace NettbutikkSharp.Entities
         /// The VAT percentage, 2 decimals
         /// </summary>
         [JsonProperty("vat")]
-        public string Vat { get; set; }
+        public decimal? Vat { get; set; }
 
         /// <summary>
         /// Whether or not the order line is blocked
@@ -336,7 +336,7 @@ namespace NettbutikkSharp.Entities
         /// The absolute amount of discount, 2 decimals
         /// </summary>
         [JsonProperty("discount")]
-        public string Discount { get; set; }
+        public decimal? Discount { get; set; }
 
         /// <summary>
         /// The gross total amount this order line costs, 2 decimals

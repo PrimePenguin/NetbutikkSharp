@@ -29,7 +29,7 @@ namespace NettbutikkSharp.Services.Product
         /// <param name="from">The earliest requested modified date (Unix timestamp)</param>
         /// <param name="to">The latest requested modified date (Unix timestamp)</param>
         /// <returns></returns>
-        public virtual async Task<ProductsQueryResponse> QueryProductsAsync(int limit, int offset, byte flat, int? from = null, int? to = null)
+        public virtual async Task<ProductsQueryResponse> QueryProductsAsync(int limit, int offset, byte flat, long? from = null, long? to = null)
         {
             var requestBuilder = new StringBuilder();
             requestBuilder.Append($"{limit}/{offset}");

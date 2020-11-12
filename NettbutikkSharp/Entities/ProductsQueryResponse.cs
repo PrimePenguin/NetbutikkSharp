@@ -78,13 +78,13 @@ namespace NettbutikkSharp.Entities
         /// The buying price. Two decimals precision
         /// </summary>
         [JsonProperty("buying_price")]
-        public string BuyingPrice { get; set; }
+        public decimal? BuyingPrice { get; set; }
 
         /// <summary>
         /// The price to which the product normally is sold. Two decimals precision
         /// </summary>
         [JsonProperty("price")]
-        public string Price { get; set; }
+        public decimal? Price { get; set; }
 
         /// <summary>
         /// The reduced price to which the product is sold at the sales. Two decimals precision
@@ -96,31 +96,31 @@ namespace NettbutikkSharp.Entities
         /// 	The weight in kilograms. Three decimals precision
         /// </summary>
         [JsonProperty("weight")]
-        public string Weight { get; set; }
+        public decimal? Weight { get; set; }
 
         /// <summary>
         /// The length in centimeters
         /// </summary>
         [JsonProperty("length")]
-        public string Length { get; set; }
+        public decimal? Length { get; set; }
 
         /// <summary>
         /// 	The height in centimeters
         /// </summary>
         [JsonProperty("height")]
-        public string Height { get; set; }
+        public decimal? Height { get; set; }
 
         /// <summary>
         /// The width in centimeters
         /// </summary>
         [JsonProperty("width")]
-        public string Width { get; set; }
+        public decimal? Width { get; set; }
 
         /// <summary>
         /// The volume in litres / cubic decimetres
         /// </summary>
         [JsonProperty("volume")]
-        public string Volume { get; set; }
+        public decimal? Volume { get; set; }
 
         /// <summary>
         /// 	The URL to the product image
@@ -150,7 +150,7 @@ namespace NettbutikkSharp.Entities
         /// The quantity in the stock
         /// </summary>
         [JsonProperty("stock")]
-        public string Stock { get; set; }
+        public int? Stock { get; set; }
 
         /// <summary>
         /// 	The percentage of value added tax for this product. Two decimals precision

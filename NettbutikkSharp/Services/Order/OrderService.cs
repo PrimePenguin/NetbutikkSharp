@@ -29,13 +29,13 @@ namespace NettbutikkSharp.Services.Order
         /// <param name="from">	The earliest requested modified date (Unix timestamp)</param>
         /// <param name="to">The latest requested modified date (Unix timestamp)</param>
         /// <returns></returns>
-        public virtual async Task<OrdersQueryResponse> QueryOrdersAsync(int limit, int offset, string from = null, string to = null)
+        public virtual async Task<OrdersQueryResponse> QueryOrdersAsync(int limit, int offset, long? from = null, long? to = null)
         {
             var requestBuilder = new StringBuilder();
             requestBuilder.Append($"{limit}/{offset}");
 
-            if (!from.IsNullOrEmpty()) requestBuilder.Append($"/{from}");
-            if (!to.IsNullOrEmpty()) requestBuilder.Append($"/{to}");
+            if (from.HasValue) requestBuilder.Append($"/{from}");
+            if (to.HasValue) requestBuilder.Append($"/{to}");
 
             var req = PrepareOrderRequest($"orders/{requestBuilder.ToString()}");
             return await ExecuteGetAsync<OrdersQueryResponse>(req);
